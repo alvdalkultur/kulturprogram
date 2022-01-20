@@ -1,307 +1,106 @@
-<meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
-<style type="text/css">.main-container {
-    width: 100%;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family:'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvdal kultur | Kulturprogrammet</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="heading">Kulturprogrammet</h2>
 
-.heading {
-  
-  font-weight: 700;
-  font-size: calc(1.2em + 1vw);
-  margin-bottom: 5px;
-}
+      <div class="divider">&nbsp;</div>
 
-.divider {
-background-color: #005699;
-height: 3px;
-width: 100px;
-}
+      <div class="cards-container">
+        <div class="loader">
+          <div class="lds-ellipsis">
+            <div>&nbsp;</div>
 
-/* LOADER */
-.lds-ellipsis {
-    display: inline-block;
-    position: relative;
-    margin: 0 auto;
-    width: 80px;
-    height: 80px;
-  }
-.lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #005699;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-.lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-  }
-.lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-.lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-.lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-  }
-@keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-@keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-@keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
+            <div>&nbsp;</div>
 
-.loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            <div>&nbsp;</div>
 
-/* EVENT CARDS */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0px;
-}
-
-
-.event-card {
-  min-width: 240px;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  color: black;
-  transition: opacity 200ms ease;
-}
-
-.event-card:hover {
-  cursor: pointer;
-  opacity: 0.85;
-  text-decoration: none;
-}
-
-.date-time {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #005699;
-  color: white;
-  margin-top: 0;
-
-}
-
-.date-time svg {
-  width: 16px;
-  margin: 2px 7px;
-}
-.date-time p {
-  font-size: 14px;
-  margin: 3px 10px 2px 0px;
-}
-
-.date-time > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.place {
-  color: #272727;
-  background-color: #f3f3f3;
-  width: 100%;
-}
-.place svg {
-  width: 16px;
-  margin: 2px 7px;
-}
-.place p {
-  font-size: 14px;
-  margin: 3px 10px 2px 0px;
-}
-
-.place > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.thumbnail {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
-  margin: 0!important;
-}
-
-.event-title {
-font-weight: 600;
-margin: 0px 10px 0px 10px;
-text-align: center;
-}
-
-.event-subtitle {
-  text-align: center;
-  margin: 5px 10px auto 10px;
-  font-size: 14px;
-  padding-bottom: 10px;
-  line-height: 1.2rem;
-}
-
-.les-mer {
-  text-align: center;
-  padding: 6px 10px 5px 10px;
-  margin: 0;
-  font-size: 14px;
-  background-color: #ececec;
-  width: 100%;
-  border-radius: 3px;
-}
-
-/* FOOTER */
-
-.footer {
-  text-decoration: none;
-  color: black;
-  text-align:center;
-
-}
-
-.footer span {
-  font-weight:600;
-}
-
-.footer svg {
-  width: 100%;
-  max-width: 300px;
-}
-</style>
-<link href="https://fonts.googleapis.com" rel="preconnect" />
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-<div class="main-container">
-<h2 class="heading">Kulturprogrammet</h2>
-
-<div class="divider">&nbsp;</div>
-
-<div class="cards-container">
-<div class="loader">
-<div class="lds-ellipsis">
-<div>&nbsp;</div>
-
-<div>&nbsp;</div>
-
-<div>&nbsp;</div>
-
-<div>&nbsp;</div>
-</div>
-</div>
-</div>
-
-<p><a class="footer" href="https://www.alvdalkultur.no/" target="_blank">Se hele programmet og mer p&aring; <span>alvdalkultur.no</span></a></p>
-<a class="footer" href="https://www.alvdalkultur.no/" target="_blank"><svg data-name="Layer 1" id="Layer_1" viewbox="0 0 664.08 156.05" xmlns="http://www.w3.org/2000/svg"><defs>
-<style type="text/css">.cls-1{fill:#005699;}
-</style>
-</defs><path class="cls-1" d="M69.46,152.28a74,74,0,0,1-39.93-17.06l15-26L61.19,138Z"></path><path class="cls-1" d="M95.66,118.25,111,144.76a72.41,72.41,0,0,1-12.91,5.06L87.74,132Z"></path><path class="cls-1" d="M151.94,78.24A74.28,74.28,0,0,1,127.5,133.4L95.66,78.25,76.2,112,44.57,57.18,12,113.67A74.5,74.5,0,0,1,105,9a23,23,0,1,0,34.75,28.36A74.11,74.11,0,0,1,151.94,78.24Z"></path><path class="cls-1" d="M142.16,27.13a22.8,22.8,0,0,1-2.42,10.26A74.67,74.67,0,0,0,105,9a23,23,0,0,1,37.17,18.1Z"></path><path d="M223.93,95.26h-23.4l-4.46,10.8h-12l22.47-50.4H218.1l22.53,50.4H228.39Zm-3.67-8.85-8-19.3-8,19.3Z"></path><path d="M245.1,52.64h11.23v53.42H245.1Z"></path><path d="M305.22,67.33l-16.35,38.73H277.28L261,67.33H272.6l10.73,26.35,11.09-26.35Z"></path><path d="M348.2,52.64v53.42H337.47V101.6q-4.17,5-12.09,5a20.13,20.13,0,0,1-9.9-2.45,17.48,17.48,0,0,1-7-7A21.31,21.31,0,0,1,306,86.7a21.32,21.32,0,0,1,2.52-10.52,17.48,17.48,0,0,1,7-7,20.13,20.13,0,0,1,9.9-2.45q7.41,0,11.59,4.68V52.64ZM334.38,94.51a10.8,10.8,0,0,0,2.8-7.81,10.81,10.81,0,0,0-2.8-7.82,10.1,10.1,0,0,0-14.19,0,10.82,10.82,0,0,0-2.81,7.82,10.81,10.81,0,0,0,2.81,7.81,10.1,10.1,0,0,0,14.19,0Z"></path><path d="M388,71q4.83,4.27,4.83,12.92v22.1H382.33v-4.82q-3.18,5.4-11.81,5.4a18.27,18.27,0,0,1-7.74-1.51,11.48,11.48,0,0,1-5-4.18,10.79,10.79,0,0,1-1.73-6,10.06,10.06,0,0,1,4.07-8.49q4.06-3.1,12.56-3.1h8.93a7.18,7.18,0,0,0-2.23-5.65c-1.49-1.32-3.73-2-6.7-2a19.43,19.43,0,0,0-6.08,1,16.14,16.14,0,0,0-5.08,2.63l-4-7.85A24.11,24.11,0,0,1,365.08,68a33.88,33.88,0,0,1,9.11-1.23Q383.19,66.75,388,71Zm-9.57,26.71a7.32,7.32,0,0,0,3.17-3.93v-4H373.9c-4.6,0-6.91,1.52-6.91,4.54a4,4,0,0,0,1.69,3.42,7.64,7.64,0,0,0,4.65,1.26A9.76,9.76,0,0,0,378.44,97.75Z"></path><path d="M403,52.64h11.23v53.42H403Z"></path><path d="M452.17,82.38,441.88,92.82v13.24h-5.33V55.66h5.33V86.12l29.59-30.46h6.12L455.77,78.49l23.33,27.57h-6.33Z"></path><path d="M519.42,68.19v37.87h-4.89V99.15a14.12,14.12,0,0,1-5.55,5.37,16.69,16.69,0,0,1-8.06,1.9q-7.43,0-11.7-4.14t-4.29-12.13v-22h5.12V89.65q0,6,2.95,9.07c2,2.06,4.77,3.1,8.42,3.1q6,0,9.43-3.64t3.46-10.12V68.19Z"></path><path d="M533.75,52.64h5.11v53.42h-5.11Z"></path><path d="M573.2,103.76a9.74,9.74,0,0,1-3.56,2,14.25,14.25,0,0,1-4.43.68q-5.33,0-8.21-2.88t-2.88-8.13V72.51h-6.76V68.19h6.76V59.91h5.12v8.28h11.52v4.32H559.24V95.12a7.15,7.15,0,0,0,1.69,5.15,6.45,6.45,0,0,0,4.86,1.76,9.62,9.62,0,0,0,3.06-.5,7.76,7.76,0,0,0,2.55-1.44Z"></path><path d="M616.62,68.19v37.87h-4.9V99.15a14,14,0,0,1-5.54,5.37,16.69,16.69,0,0,1-8.06,1.9q-7.43,0-11.7-4.14t-4.29-12.13v-22h5.11V89.65q0,6,3,9.07c2,2.06,4.77,3.1,8.42,3.1q6,0,9.43-3.64t3.46-10.12V68.19Z"></path><path d="M641.21,69.85A18.15,18.15,0,0,1,650,67.9v5l-1.23-.07q-6,0-9.36,3.67t-3.38,10.3v19.29H631V68.19h4.89v7.42A12.32,12.32,0,0,1,641.21,69.85Z"></path></svg> </a></div>
-<script>
-        function renderEvents(results) {
-    const eventsGrid = document.querySelector(".cards-container");
-  eventsGrid.innerHTML = "";
-
-
-  for (let i = 0; i < results.length; i++) {
-    console.log(results[i])
-    const startTime = new Date(results[i].start_unix * 1000);
-    const month = startTime.toLocaleString("no-NO", {month: "short"});
-    const weekday = startTime.toLocaleString("no-NO", {weekday: "long"});
-    const day = startTime.toLocaleString("no-NO", {day: "numeric"});
-    const hourMin = startTime.toLocaleString("no-NO", {timeStyle: "short"});
-
-    eventsGrid.innerHTML += `
-  <a href="${results[i].permalink}" target="_blank" class="event-card">
-  <img src="${results[i].featured_image.medium}" alt="Bilde for arrangement" class="thumbnail">
-  <div class="date-time">
-      <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <p class="date-text">${weekday} ${day} ${month}</p>
+            <div>&nbsp;</div>
+          </div>
+        </div>
       </div>
-      <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <p class="date-text">kl. ${hourMin}</p>
-      </div>
-  </div>
-  <div class="place">
-  <div>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      <p>${results[i].sted}</p>
-  </div>
-</div>
-  <h3 class="event-title">${results[i].tittel}</h3>
-  <p class="event-subtitle">${results[i].undertittel}</p>
-  <p class="les-mer"></p>
-    </a>
-    `;
 
-    if (i === 2) {
-      break
-    };
-
-  };
-}
-
-const url = "https://alvdalkultur.no/wp-json/ak/v1/eventer";
-
-async function getEvents() {
-  try {
-    const response = await fetch(url);
-    const results = await response.json();
-    
-    renderEvents(results)
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-getEvents();
-    </script>
+      <p>
+        <a class="footer" href="https://www.alvdalkultur.no/" target="_blank"
+          >Se hele programmet og mer p&aring; <span>alvdalkultur.no</span></a
+        >
+      </p>
+      <a class="footer" href="https://www.alvdalkultur.no/" target="_blank"
+        ><svg
+          data-name="Layer 1"
+          id="Layer_1"
+          viewbox="0 0 664.08 156.05"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <style type="text/css">
+              .cls-1 {
+                fill: #005699;
+              }
+            </style>
+          </defs>
+          <path
+            class="cls-1"
+            d="M69.46,152.28a74,74,0,0,1-39.93-17.06l15-26L61.19,138Z"
+          ></path>
+          <path
+            class="cls-1"
+            d="M95.66,118.25,111,144.76a72.41,72.41,0,0,1-12.91,5.06L87.74,132Z"
+          ></path>
+          <path
+            class="cls-1"
+            d="M151.94,78.24A74.28,74.28,0,0,1,127.5,133.4L95.66,78.25,76.2,112,44.57,57.18,12,113.67A74.5,74.5,0,0,1,105,9a23,23,0,1,0,34.75,28.36A74.11,74.11,0,0,1,151.94,78.24Z"
+          ></path>
+          <path
+            class="cls-1"
+            d="M142.16,27.13a22.8,22.8,0,0,1-2.42,10.26A74.67,74.67,0,0,0,105,9a23,23,0,0,1,37.17,18.1Z"
+          ></path>
+          <path
+            d="M223.93,95.26h-23.4l-4.46,10.8h-12l22.47-50.4H218.1l22.53,50.4H228.39Zm-3.67-8.85-8-19.3-8,19.3Z"
+          ></path>
+          <path d="M245.1,52.64h11.23v53.42H245.1Z"></path>
+          <path
+            d="M305.22,67.33l-16.35,38.73H277.28L261,67.33H272.6l10.73,26.35,11.09-26.35Z"
+          ></path>
+          <path
+            d="M348.2,52.64v53.42H337.47V101.6q-4.17,5-12.09,5a20.13,20.13,0,0,1-9.9-2.45,17.48,17.48,0,0,1-7-7A21.31,21.31,0,0,1,306,86.7a21.32,21.32,0,0,1,2.52-10.52,17.48,17.48,0,0,1,7-7,20.13,20.13,0,0,1,9.9-2.45q7.41,0,11.59,4.68V52.64ZM334.38,94.51a10.8,10.8,0,0,0,2.8-7.81,10.81,10.81,0,0,0-2.8-7.82,10.1,10.1,0,0,0-14.19,0,10.82,10.82,0,0,0-2.81,7.82,10.81,10.81,0,0,0,2.81,7.81,10.1,10.1,0,0,0,14.19,0Z"
+          ></path>
+          <path
+            d="M388,71q4.83,4.27,4.83,12.92v22.1H382.33v-4.82q-3.18,5.4-11.81,5.4a18.27,18.27,0,0,1-7.74-1.51,11.48,11.48,0,0,1-5-4.18,10.79,10.79,0,0,1-1.73-6,10.06,10.06,0,0,1,4.07-8.49q4.06-3.1,12.56-3.1h8.93a7.18,7.18,0,0,0-2.23-5.65c-1.49-1.32-3.73-2-6.7-2a19.43,19.43,0,0,0-6.08,1,16.14,16.14,0,0,0-5.08,2.63l-4-7.85A24.11,24.11,0,0,1,365.08,68a33.88,33.88,0,0,1,9.11-1.23Q383.19,66.75,388,71Zm-9.57,26.71a7.32,7.32,0,0,0,3.17-3.93v-4H373.9c-4.6,0-6.91,1.52-6.91,4.54a4,4,0,0,0,1.69,3.42,7.64,7.64,0,0,0,4.65,1.26A9.76,9.76,0,0,0,378.44,97.75Z"
+          ></path>
+          <path d="M403,52.64h11.23v53.42H403Z"></path>
+          <path
+            d="M452.17,82.38,441.88,92.82v13.24h-5.33V55.66h5.33V86.12l29.59-30.46h6.12L455.77,78.49l23.33,27.57h-6.33Z"
+          ></path>
+          <path
+            d="M519.42,68.19v37.87h-4.89V99.15a14.12,14.12,0,0,1-5.55,5.37,16.69,16.69,0,0,1-8.06,1.9q-7.43,0-11.7-4.14t-4.29-12.13v-22h5.12V89.65q0,6,2.95,9.07c2,2.06,4.77,3.1,8.42,3.1q6,0,9.43-3.64t3.46-10.12V68.19Z"
+          ></path>
+          <path d="M533.75,52.64h5.11v53.42h-5.11Z"></path>
+          <path
+            d="M573.2,103.76a9.74,9.74,0,0,1-3.56,2,14.25,14.25,0,0,1-4.43.68q-5.33,0-8.21-2.88t-2.88-8.13V72.51h-6.76V68.19h6.76V59.91h5.12v8.28h11.52v4.32H559.24V95.12a7.15,7.15,0,0,0,1.69,5.15,6.45,6.45,0,0,0,4.86,1.76,9.62,9.62,0,0,0,3.06-.5,7.76,7.76,0,0,0,2.55-1.44Z"
+          ></path>
+          <path
+            d="M616.62,68.19v37.87h-4.9V99.15a14,14,0,0,1-5.54,5.37,16.69,16.69,0,0,1-8.06,1.9q-7.43,0-11.7-4.14t-4.29-12.13v-22h5.11V89.65q0,6,3,9.07c2,2.06,4.77,3.1,8.42,3.1q6,0,9.43-3.64t3.46-10.12V68.19Z"
+          ></path>
+          <path
+            d="M641.21,69.85A18.15,18.15,0,0,1,650,67.9v5l-1.23-.07q-6,0-9.36,3.67t-3.38,10.3v19.29H631V68.19h4.89v7.42A12.32,12.32,0,0,1,641.21,69.85Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
