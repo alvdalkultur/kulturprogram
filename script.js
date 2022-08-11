@@ -42,7 +42,7 @@ function renderEvents(results) {
   }
 }
 
-const url = "https://noroffcors.herokuapp.com/https://alvdalkultur-api.herokuapp.com/v2/kommende-eventer";
+const url = "https://alvdalkultur-api.herokuapp.com/v2/kommende-eventer";
 
 async function getEvents() {
   try {
