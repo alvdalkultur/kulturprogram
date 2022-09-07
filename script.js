@@ -42,7 +42,7 @@ function renderEvents(results) {
   }
 }
 
-const url = "https://alvdalkultur-api.herokuapp.com/v2/kommende-eventer";
+const url = "https://alvdalkultur-api-production.up.railway.app/v1/kommende-eventer";
 
 async function getEvents() {
   try {
