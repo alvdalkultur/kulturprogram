@@ -9,6 +9,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
+  
 }
 
 .heading {
@@ -300,6 +301,39 @@ body {
   padding-bottom: 15px;
   line-height: 1.2rem;
 }
+
+.show-more-class {
+  display: none;
+}
+
+
+/* BUTTON */
+
+.vis-mer-button-container {
+  padding-bottom: 1rem;
+  display: none;
+}
+
+.vis-mer-button {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 0.5em 2em;
+  color: #005699;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+}
+
+.vis-mer-button:hover {
+  background-color: #005699;
+  color: white;
+}
+
+
 
 /* FOOTER */
 

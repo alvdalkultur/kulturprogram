@@ -15,9 +15,20 @@ function renderEvents(results) {
     const monthEnd = endTime.toLocaleString("no-NO", { month: "short" });
     const weekdayEnd = endTime.toLocaleString("no-NO", { weekday: "short" });
 
+    
+    const showMore = document.querySelector("#visMerButton");
+    if(results.length > 8) {
+      showMore.style.display = "block";
+    }
+
+    let showMoreClass = "";
+    if(i >= 8) {
+      showMoreClass = "show-more-class"
+    }
+
 
     eventsGrid.innerHTML += `
-    <a href="${results[i].permalink}" target="_blank" class="event-card">
+    <a href="${results[i].permalink}" target="_blank" class="event-card ${showMoreClass}">
     <img src="${results[i].bilde_medium}" alt="Bilde for arrangement" class="thumbnail">
     <div class="overlay">
       <div class="dato-sted-wrapper">
@@ -46,7 +57,7 @@ function renderEvents(results) {
 </a>
     `;
 
-    if (i === 8) {
+    if (i === 20) {
       break;
     }
   }
@@ -66,3 +77,18 @@ async function getEvents() {
 }
 
 getEvents();
+
+function visMer() {
+  const showMoreCard = document.querySelectorAll(".show-more-class");
+  const btnText = document.querySelector(".vis-mer-button");
+  showMoreCard.forEach(element => {
+    if(element.style.display === "none" || element.style.display === "") {
+      element.style.display = "flex";
+      btnText.innerHTML = `Vis mindre <svg style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+    } else {
+      element.style.display = "none";
+      btnText.innerHTML = `Vis mer <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+      window.location.href = "#program-top"
+    }
+  });
+}
