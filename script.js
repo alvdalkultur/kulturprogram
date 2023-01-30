@@ -4,11 +4,11 @@ function renderEvents(results) {
 
   for (let i = 0; i < results.length; i++) {
     const startTime = new Date(results[i].start_iso);
-    const month = startTime.toLocaleString("no-NO", { month: "short" });
-    const weekday = startTime.toLocaleString("no-NO", { weekday: "long" });
-    const day = startTime.toLocaleString("no-NO", { day: "numeric" });
+    const month = startTime.toLocaleString("no-NO", { month: "short", timeZone: "Europe/Oslo" });
+    const weekday = startTime.toLocaleString("no-NO", { weekday: "long", timeZone: "Europe/Oslo" });
+    const day = startTime.toLocaleString("no-NO", { day: "numeric", timeZone: "Europe/Oslo" });
     const hourMin = startTime.toLocaleString("no-NO", {
-      timeStyle: "short",
+      timeStyle: "short", timeZone: "Europe/Oslo"
     });
 
     eventsGrid.innerHTML += `
